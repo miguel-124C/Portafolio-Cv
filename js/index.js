@@ -56,3 +56,5 @@ const mostrarScroll = (e)=>{
 }
 
 addEventListener("scroll",mostrarScroll);
+
+console.log(window.location.pathname);

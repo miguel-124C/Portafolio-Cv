@@ -2,7 +2,7 @@
     --color-primario: rgb(14, 208, 214);
     --color-contraste: #163e4f;
     --color-secundario: rgb(36, 36, 36);
-    --color-terciario: rgba(14, 64, 79, 0.265);
+    --color-terciario: rgb(220, 64, 64);
 }
 
 *{
@@ -283,7 +283,6 @@ main{
 
 .information{
     flex-direction: column;
-    background: var(--color-terciario);
     width: 500px;
     height: 300px;
     border: 5px solid #000;
@@ -293,7 +292,6 @@ main{
     transition: box-shadow,opacity .5s;
 }
 .information:hover{
-    box-shadow: 0 0 20px 1px var(--color-secundario);
     opacity: 1;
 }
 .information img{
@@ -318,7 +316,113 @@ main{
     height: 80%;
 }
 
+#servicios{
+    background: linear-gradient(var(--color-contraste),#000);
+}
+
+
 #portafolio{
     background-image: url(https://images2.alphacoders.com/111/111200.jpg);
+    background-position: center;
+    background-size: cover;
+    max-height: 100vh;
+    flex-wrap: wrap;
+    background-repeat: no-repeat;
     background-attachment: fixed;
+}
+#portafolio .portafolio-p{
+    color: #fff;
+    font-weight: 900;
+    font-size: 1.2em;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-left: 2px solid var(--color-terciario);
+    padding-left: 50px;
+}
+#portafolio .portafolio-p div{
+    position: relative;
+}
+#portafolio .portafolio-p div::before{
+    position: absolute;
+    content: "";
+    left: -65px;
+    width: 30px;
+    height: 30px;
+    background: var(--color-terciario);
+    border-radius: 50%;
+}
+#portafolio #container-proyectos{
+    width: 505px;
+    height: 500px;
+    margin-top: 80px;
+    display: flex;
+    gap: 5px;
+    position: relative;
+    overflow: hidden;
+
+}
+#container-proyectos .proyectos{
+    /*transform: translateX(-500px);*/
+    transition: transform 1s;
+    position: relative;
+    height: 400px;
+    cursor: pointer;
+}
+.proyectos span{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    width: 100%;
+    height: 40%;
+    opacity: 0;
+    transition: opacity .70s;
+}
+.proyectos span p,.proyectos span a{
+    width: 80%;
+    color: #fff;
+}
+.proyectos img{
+    width: 500px;
+    height: 400px;
+    filter: grayscale(100%);
+    transition: all .70s;
+}
+#container-proyectos .proyectos:hover span{
+        opacity: .85;
+}
+#container-proyectos .proyectos:hover  img{
+    filter: grayscale(0);
+}
+
+
+#container-proyectos .btn-previous-next-img{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+}
+.btn-previous-next-img input{
+    appearance: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color-terciario);
+    transition: .5s;
+}
+.btn-previous-next-img input:hover{
+    background: var(--color-terciario);
 }
