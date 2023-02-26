@@ -1,6 +1,8 @@
 :root{
     --color-primario: rgb(14, 208, 214);
+    --color-contraste: #163e4f;
     --color-secundario: rgb(36, 36, 36);
+    --color-terciario: rgba(14, 64, 79, 0.265);
 }
 
 *{
@@ -110,7 +112,7 @@ main{
 #container__name{
     margin-top: 80px;
     height: 100px;
-    width: 300px;
+    width: 500px;
     overflow: hidden;
     margin-left: 50px;
 }
@@ -259,8 +261,61 @@ main{
 
 
 #about-me{
+    background: linear-gradient(var(--color-secundario) 40%, var(--color-contraste));
+    /*height: auto;   Utilizar esto en un media query*/
+}
+#about-me .about-container, .about-container .container-div,.information{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+#about-me .about-container{
+    margin-top: 80px;
+    gap: 70px;
+    flex-direction: column;
+}
+.about-container .container-div{
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: 310px;
+}
 
-
+.information{
+    flex-direction: column;
+    background: var(--color-terciario);
+    width: 500px;
+    height: 300px;
+    border: 5px solid #000;
+    position: relative;
+    cursor: pointer;
+    opacity: .6;
+    transition: box-shadow,opacity .5s;
+}
+.information:hover{
+    box-shadow: 0 0 20px 1px var(--color-secundario);
+    opacity: 1;
+}
+.information img{
+    position: absolute;
+    opacity: .1;
+    width: 280px;
+    height: 280px;
+    top: calc(50% - 140px);
+    left: calc(50% - 140px);
+    border-radius: 50%;
+    object-fit: cover;
+}
+.information-title,.information-text{
+    color: #fff;
+}
+.information-title{
+    font-size: 2em;
+}
+.information-text{
+    font-size: 1.1em;
+    width: 80%;
+    height: 80%;
 }
 
 #portafolio{
