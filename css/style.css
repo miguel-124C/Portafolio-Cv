@@ -59,7 +59,6 @@ body{
     position: absolute;
     top: -70px;
     right: 0;
-    background: black;
     border-radius: 10px;
     animation: aparecer forwards 1.5s;
 }
@@ -79,8 +78,8 @@ body{
     }
 }
 #contact-me i{
-    font-size: 50px;
-    margin: 10px;
+    font-size: 40px;
+    margin: 20px 10px;
 }
 #contact-me a:nth-child(1){
     color: rgb(255, 255, 255);
@@ -317,7 +316,19 @@ main{
 }
 
 #servicios{
-    background: linear-gradient(var(--color-contraste),#000);
+    background: linear-gradient(45deg,#000,var(--color-contraste));
+}
+#servicios div{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px 0 #000;
+    color: #fff;
+    font-size: 2em;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
 }
 
 
@@ -325,7 +336,6 @@ main{
     background-image: url(https://images2.alphacoders.com/111/111200.jpg);
     background-position: center;
     background-size: cover;
-    max-height: 100vh;
     flex-wrap: wrap;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -425,4 +435,33 @@ main{
 }
 .btn-previous-next-img input:hover{
     background: var(--color-terciario);
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1050px) {
+    #contact-me i{
+        font-size: 30px;
+        margin: 25px 10px;
+    }
+    #navigation #nav_ul{
+        justify-content: flex-start;
+        padding-left: 10px;
+    }
+    #portafolio{
+        height: auto;
+    }
+    #portafolio .portafolio-p{
+        margin: 80px 0 0 20px;
+    }
+}
+@media screen and (max-width: 740px){
+
 }
