@@ -420,6 +420,7 @@ main{
     position: absolute;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 20px;
     bottom: 20px;
     left: 0;
@@ -465,6 +466,19 @@ main{
     }
 }
 @media screen and (max-width: 720px){
+    #contact-me i{
+        font-size: 30px;
+        margin: 5px;
+    }
+    #navigation #nav_ul{
+        align-items: flex-end;
+    }
+
+
+    .information{
+        width: 400px;
+    }
+
     .about-me_tecno{
         width: 400px;
         height: 400px;
@@ -499,8 +513,71 @@ main{
     }
 }
 
-@media screen and (min-width: 720px) {
-    body{
-        background: red;
+@media screen and (max-width: 480px) {
+    #contact-me i{
+        font-size: 30px;
+        margin: 5px;
     }
+    #navigation #nav_ul{
+        align-items: flex-end;
+    }
+    #navigation #nav_ul li a{
+        font-size: 1.3em;
+    }
+    #portafolio{
+        height: 100vh;
+    }
+
+    .about-container .container-div{
+        height: 260px;
+    }
+    .information{
+        width: 300px;
+        height: 250px;
+    }
+
+    .about-me_tecno{
+        width: 300px;
+        height: 250px;
+    }
+    .slide i{
+        font-size: 4em;
+    }
+    .slider-track{
+        width: calc(300px * 14);
+    }
+    .slider-track .slide{
+        width: 300px;
+    }
+
+    .list-estadistica{
+        width: 300px;
+    }
+    .list-estadistica li input{
+        width: 150px;
+    }
+
+
+    #portafolio{
+        flex-direction: column;
+    }
+    #portafolio #container-proyectos{
+        width: 300px;
+        height: 400px;
+    }
+    #portafolio .portafolio-p{
+        height: 300px;
+    }
+    #portafolio .portafolio-p{
+        font-size: 1em;
+        width: 300px;
+    }
+    .proyectos img{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 480px){
+
 }
