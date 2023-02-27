@@ -499,7 +499,7 @@ main{
     }
 }
 
-@media screen and (min-width: 720) {
+@media screen and (min-width: 720px) {
     body{
         background: red;
     }
