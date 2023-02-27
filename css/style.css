@@ -465,9 +465,6 @@ main{
     }
 }
 @media screen and (max-width: 720px){
-    body{
-        background: red;
-    }
     .about-me_tecno{
         width: 400px;
         height: 400px;
@@ -499,5 +496,11 @@ main{
     }
     .proyectos img{
         width: 400px;
+    }
+}
+
+@media screen and (min-width: 720) {
+    body{
+        background: red;
     }
 }
