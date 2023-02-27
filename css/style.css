@@ -182,7 +182,9 @@ main{
     width: 80%;
     height: 80%;
     background: #000;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .slide img{
     object-fit: cover;
@@ -462,6 +464,37 @@ main{
         margin: 80px 0 0 20px;
     }
 }
-@media screen and (max-width: 740px){
+@media screen and (max-width: 720px){
+    .about-me_tecno{
+        width: 400px;
+        height: 400px;
+    }
+    .slide i{
+        font-size: 6em;
+    }
+    .slider-track{
+        width: calc(400px * 14);
+    }
+    .slider-track .slide{
+        width: 400px;
+    }
 
+    .list-estadistica{
+        width: 400px;
+    }
+    .list-estadistica li input{
+        width: 250px;
+    }
+
+
+
+    #portafolio .portafolio-p{
+        width: 400px;
+    }
+    #portafolio #container-proyectos{
+        width: 405px;
+    }
+    .proyectos img{
+        width: 400px;
+    }
 }
