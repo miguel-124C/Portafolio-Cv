@@ -524,9 +524,6 @@ main{
     #navigation #nav_ul li a{
         font-size: 1.3em;
     }
-    #portafolio{
-        height: 100vh;
-    }
 
     .about-container .container-div{
         height: 260px;
@@ -558,9 +555,6 @@ main{
     }
 
 
-    #portafolio{
-        flex-direction: column;
-    }
     #portafolio #container-proyectos{
         width: 300px;
         height: 400px;
@@ -576,8 +570,4 @@ main{
         width: 300px;
         height: 300px;
     }
-}
-
-@media screen and (max-width: 480px){
-
 }
