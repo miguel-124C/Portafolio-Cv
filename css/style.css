@@ -436,7 +436,7 @@ main{
     width: 20px;
     height: 20px;
     border: 2px solid var(--color-terciario);
-    transition: background .5s;
+    transition: background 1s;
 }
 
 
@@ -505,7 +505,7 @@ main{
         width: 400px;
     }
     #portafolio #container-proyectos{
-        width: 405px;
+        width: 400px;
     }
     .proyectos img{
         width: 400px;
