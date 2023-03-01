@@ -367,11 +367,10 @@ main{
     border-radius: 50%;
 }
 #portafolio #container-proyectos{
-    width: 505px;
+    width: 500px;
     height: 500px;
     margin-top: 80px;
     display: flex;
-    gap: 5px;
     position: relative;
     overflow: hidden;
 
@@ -427,6 +426,9 @@ main{
     width: 100%;
     height: 50px;
 }
+.btn-previous-next-img input:first-child{
+    background: var(--color-terciario);
+}
 .btn-previous-next-img input{
     appearance: none;
     border-radius: 50%;
@@ -434,10 +436,7 @@ main{
     width: 20px;
     height: 20px;
     border: 2px solid var(--color-terciario);
-    transition: .5s;
-}
-.btn-previous-next-img input:hover{
-    background: var(--color-terciario);
+    transition: background .5s;
 }
 
 

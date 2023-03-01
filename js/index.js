@@ -1,3 +1,7 @@
+/*Variables globales*/
+const sizeImgProyectos = 500;
+
+
 const text = document.querySelector(".sec-text");
 
 const textLoad=()=>{
@@ -57,4 +61,31 @@ const mostrarScroll = (e)=>{
 
 addEventListener("scroll",mostrarScroll);
 
-console.log(window.location.pathname);
+
+
+/*Portafolio*/
+const btnImgPortafolio = document.querySelector(".btn-previous-next-img");
+const proyectos = document.querySelectorAll(".proyectos");
+const botones = btnImgPortafolio.children;
+
+const addTransformTranslate=(size)=>{
+    for (const hijos of proyectos) {
+        hijos.setAttribute("style",`transform : translateX(${size}px)`);  
+    }
+}
+const checkInputPortafolio=()=>{
+    
+}
+for (const btn in botones) {
+    botones[btn].addEventListener("click",()=>{
+        botones[btn].style.background = "red";
+        if(btn == 0)addTransformTranslate(0);
+        if(btn == 1)addTransformTranslate(-sizeImgProyectos);
+        if(btn == 2)addTransformTranslate(-sizeImgProyectos * btn);
+        if(btn == 3)addTransformTranslate(-sizeImgProyectos * btn);
+        if(btn == 4)addTransformTranslate(-sizeImgProyectos * btn);
+        if(btn == 5)addTransformTranslate(-sizeImgProyectos * btn);
+        if(btn == 6)addTransformTranslate(-sizeImgProyectos * btn);
+        if(btn == 7)addTransformTranslate(-sizeImgProyectos * btn);
+    });
+}
