@@ -1,7 +1,18 @@
 /*Variables globales*/
-const sizeImgProyectos = 500;
-
-
+let sizeImgProyectos;
+addEventListener("load",()=>{
+    if((window.screen.availWidth > 720)){
+        sizeImgProyectos = 500;
+        console.log(500);
+    }else if(window.screen.availWidth > 480){
+        sizeImgProyectos = 400;
+        console.log(400);
+    }else if(window.screen.availWidth > 350){
+        sizeImgProyectos = 300;
+        console.log(300);
+    }
+});
+    /*Efecto typing*/
 const text = document.querySelector(".sec-text");
 
 const textLoad=()=>{
@@ -20,9 +31,7 @@ textLoad();
 
 setInterval(textLoad,12000);
 
-
-
-
+/*Efecto de la seccion de conocimientos*/
 let animationSlider = true;
 let sliderRange = true;
 const sliderTrack = document.querySelector(".slider-track");
@@ -30,7 +39,6 @@ const rangeEstadistica = document.querySelectorAll(".range-estadistica");
 const estadisticaItems = document.querySelectorAll(".list-estadistica-childrens");
 const listEstadistida = document.querySelector(".list-estadistica");
 const estadistica = [95,90,70,60,40,30,50];
-
 
 const mostrarScroll = (e)=>{
     let scrollEnY = document.documentElement.scrollTop;
@@ -61,8 +69,6 @@ const mostrarScroll = (e)=>{
 
 addEventListener("scroll",mostrarScroll);
 
-
-
 /*Portafolio*/
 const btnImgPortafolio = document.querySelector(".btn-previous-next-img");
 const proyectos = document.querySelectorAll(".proyectos");
@@ -73,12 +79,21 @@ const addTransformTranslate=(size)=>{
         hijos.setAttribute("style",`transform : translateX(${size}px)`);  
     }
 }
-const checkInputPortafolio=()=>{
-    
+const checkInputPortafolio=(btn)=>{
+    let varRoot = document.querySelector(':root');
+    let colorBackground = getComputedStyle(varRoot);
+
+    botones[btn].setAttribute("style",`background: ${colorBackground.getPropertyValue('--color-terciario')}`);
+    for(let i = 0; i < 8; i++){
+        if(i != btn){
+            botones[i].setAttribute("style","background: none");
+        }
+    }
 }
+
 for (const btn in botones) {
     botones[btn].addEventListener("click",()=>{
-        botones[btn].style.background = "red";
+        checkInputPortafolio(btn);
         if(btn == 0)addTransformTranslate(0);
         if(btn == 1)addTransformTranslate(-sizeImgProyectos);
         if(btn == 2)addTransformTranslate(-sizeImgProyectos * btn);
