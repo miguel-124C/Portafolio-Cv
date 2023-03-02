@@ -1,17 +1,42 @@
 /*Variables globales*/
 let sizeImgProyectos;
 addEventListener("load",()=>{
-    if((window.screen.availWidth > 720)){
+    if((window.innerWidth > 720)){
         sizeImgProyectos = 500;
         console.log(500);
-    }else if(window.screen.availWidth > 480){
+    }else if(window.innerWidth > 480){
         sizeImgProyectos = 400;
         console.log(400);
-    }else if(window.screen.availWidth > 350){
+    }else if(window.innerWidth > 350){
         sizeImgProyectos = 300;
         console.log(300);
     }
 });
+
+const mostrarSeccionClickeada = (obj,ind,prop,value,variable,total) => {
+    let varRoot = document.querySelector(':root');
+    let color = getComputedStyle(varRoot);
+
+    obj[ind].setAttribute("style",`${prop}: ${color.getPropertyValue(`${variable}`)}`);
+    for(let i = 0; i < total; i++){
+        if(i != ind){
+            obj[i].setAttribute("style",`${prop}: ${value}`);
+        }
+    }
+}
+
+    /*NAv*/
+
+const nav_ul = document.getElementById("nav_ul");
+const childNav = nav_ul.children;
+
+for (const element of childNav){
+    element.addEventListener("click",()=>{
+        mostrarSeccionClickeada(childNav,element.className,"color","#fff","--color-primario",4);
+    });
+    
+}
+
     /*Efecto typing*/
 const text = document.querySelector(".sec-text");
 
@@ -79,28 +104,18 @@ const addTransformTranslate=(size)=>{
         hijos.setAttribute("style",`transform : translateX(${size}px)`);  
     }
 }
-const checkInputPortafolio=(btn)=>{
-    let varRoot = document.querySelector(':root');
-    let colorBackground = getComputedStyle(varRoot);
 
-    botones[btn].setAttribute("style",`background: ${colorBackground.getPropertyValue('--color-terciario')}`);
-    for(let i = 0; i < 8; i++){
-        if(i != btn){
-            botones[i].setAttribute("style","background: none");
-        }
-    }
-}
 
-for (const btn in botones) {
-    botones[btn].addEventListener("click",()=>{
-        checkInputPortafolio(btn);
-        if(btn == 0)addTransformTranslate(0);
-        if(btn == 1)addTransformTranslate(-sizeImgProyectos);
-        if(btn == 2)addTransformTranslate(-sizeImgProyectos * btn);
-        if(btn == 3)addTransformTranslate(-sizeImgProyectos * btn);
-        if(btn == 4)addTransformTranslate(-sizeImgProyectos * btn);
-        if(btn == 5)addTransformTranslate(-sizeImgProyectos * btn);
-        if(btn == 6)addTransformTranslate(-sizeImgProyectos * btn);
-        if(btn == 7)addTransformTranslate(-sizeImgProyectos * btn);
+for (const btn of botones) {
+    btn.addEventListener("click",()=>{
+        mostrarSeccionClickeada(botones,btn.className,"background","transparent","--color-terciario",8);
+        if(btn.className == 0)addTransformTranslate(0);
+        if(btn.className == 1)addTransformTranslate(-sizeImgProyectos);
+        if(btn.className == 2)addTransformTranslate(-sizeImgProyectos * btn.className);
+        if(btn.className == 3)addTransformTranslate(-sizeImgProyectos * btn.className);
+        if(btn.className == 4)addTransformTranslate(-sizeImgProyectos * btn.className);
+        if(btn.className == 5)addTransformTranslate(-sizeImgProyectos * btn.className);
+        if(btn.className == 6)addTransformTranslate(-sizeImgProyectos * btn.className);
+        if(btn.className == 7)addTransformTranslate(-sizeImgProyectos * btn.className);
     });
 }
