@@ -310,10 +310,14 @@ main{
 }
 .information-text{
     font-size: 1.1em;
+    z-index: 100;
+    color: #fff;
     width: 80%;
     height: 80%;
 }
-
+.information-text a{
+    color: var(--color-terciario);
+}
 #servicios{
     background: linear-gradient(45deg,#000,var(--color-contraste));
 }
@@ -514,11 +518,17 @@ main{
         font-size: 30px;
         margin: 5px;
     }
-    #navigation #nav_ul{
-        align-items: flex-end;
+    #navigation #nav_ul a{
+        height: 40%;
+        font-size: 1.1em;
     }
-    #navigation #nav_ul li a{
-        font-size: 1.3em;
+
+    #container__name{
+        width: 300px;
+        margin-left: 20px;
+    }
+    #container__name .text{
+        font-size: 20px;
     }
 
     .about-container .container-div{
@@ -554,6 +564,13 @@ main{
     #portafolio #container-proyectos{
         width: 300px;
         height: 400px;
+    }
+    #container-proyectos .proyectos{
+        height: 300px;
+    }
+    .proyectos span{
+        font-size: .8em;
+        height: 50%;
     }
     #portafolio .portafolio-p{
         height: 300px;
