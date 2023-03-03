@@ -535,6 +535,13 @@ main{
     .about-container .container-div{
         height: 260px;
     }
+    .information-title{
+        font-size: 1.5em;
+    }
+    .information-text{
+        font-size: .9em;
+        width: 95%;
+    }
     .information{
         width: 300px;
         height: 250px;
