@@ -121,7 +121,7 @@ const addTransformTranslate=(size)=>{
 
 for (const btn of botones) {
     btn.addEventListener("click",()=>{
-        mostrarSeccionClickeada(botones,btn.className,"background","transparent","--color-terciario",8);
+        mostrarSeccionClickeada(botones,btn.className,"background","transparent","--color-terciario",10);
         if(btn.className == 0)addTransformTranslate(0);
         if(btn.className == 1)addTransformTranslate(-sizeImgProyectos);
         if(btn.className == 2)addTransformTranslate(-sizeImgProyectos * btn.className);
@@ -130,5 +130,7 @@ for (const btn of botones) {
         if(btn.className == 5)addTransformTranslate(-sizeImgProyectos * btn.className);
         if(btn.className == 6)addTransformTranslate(-sizeImgProyectos * btn.className);
         if(btn.className == 7)addTransformTranslate(-sizeImgProyectos * btn.className);
+        if(btn.className == 8)addTransformTranslate(-sizeImgProyectos * btn.className);
+        if(btn.className == 9)addTransformTranslate(-sizeImgProyectos * btn.className);
     });
 }
