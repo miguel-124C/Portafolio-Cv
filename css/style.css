@@ -186,6 +186,7 @@ main{
 .slide img{
     object-fit: cover;
     object-position: center;
+    background: #fff;
 }
 .slide .fa-html5{
     color: rgb(221, 122, 0);
@@ -199,17 +200,13 @@ main{
 .slide .fa-github{
     color: #fff;
 }
-.slide .fa-react{
-    color: rgb(48, 227, 255);
-    background: #fff;
-}
 
 @keyframes scrollx {
     0%{
         transform: translateX(0);
     }
     100%{
-        transform: translateX(calc(-500px * 7));
+        transform: translateX(calc(-500px * 6));
     }
 }
 

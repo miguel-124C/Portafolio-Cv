@@ -63,7 +63,7 @@ const sliderTrack = document.querySelector(".slider-track");
 const rangeEstadistica = document.querySelectorAll(".range-estadistica");
 const estadisticaItems = document.querySelectorAll(".list-estadistica-childrens");
 const listEstadistida = document.querySelector(".list-estadistica");
-const estadistica = [95,90,70,60,40,30,50];
+const estadistica = [95,80,75,45,40,30];
 
 const mostrarScroll = (e)=>{
     let scrollEnY = document.documentElement.scrollTop;
@@ -85,7 +85,6 @@ const mostrarScroll = (e)=>{
                     }else{
                         clearInterval(slideEstadistica);
                     }
-                    console.log(2);
                 }, 15);
         }
         sliderRange = false;
@@ -95,16 +94,30 @@ const mostrarScroll = (e)=>{
 addEventListener("scroll",mostrarScroll);
 
 /*Portafolio*/
+const containProyect = document.getElementById("container-proyectos");
+
+proyects.forEach(proyecto=>{
+    const div = document.createElement("div");
+    div.classList.add("proyectos");
+    div.innerHTML = `
+    <img src="${proyecto.img}" alt="">
+    <span>
+        <p>${proyecto.dataInfo}</p>
+        <a href="${proyecto.href}" target="_blank">Ir al sitio</a>
+    </span>
+    `;
+    containProyect.appendChild(div);
+});
+
 const btnImgPortafolio = document.querySelector(".btn-previous-next-img");
-const proyectos = document.querySelectorAll(".proyectos");
 const botones = btnImgPortafolio.children;
+const proyectos = document.querySelectorAll(".proyectos");
 
 const addTransformTranslate=(size)=>{
     for (const hijos of proyectos) {
         hijos.setAttribute("style",`transform : translateX(${size}px)`);  
     }
 }
-
 
 for (const btn of botones) {
     btn.addEventListener("click",()=>{
